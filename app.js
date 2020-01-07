@@ -8,8 +8,28 @@ var budgetController = (function () {
 
   return {
       publicTest: function(b) {
-        console.log(add(b));
+        return add(b);
       }
   }
 
 })();
+
+
+var uIController = (function() {
+
+
+
+})();
+
+
+var controller = (function(budgetCtrl, UICtrl) {
+
+var z = budgetCtrl.publicTest(5);
+
+  return {
+      budgetTest: function() {
+        console.log(z);
+      }
+  }
+
+})(budgetController, uIController);
